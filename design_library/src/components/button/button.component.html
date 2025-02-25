@@ -1,0 +1,24 @@
+<div class="button-background">
+    @if( disabled ) {
+    <div class="disabled">
+        <div class="button-text">
+            {{buttonText}}
+        </div>
+    </div>
+    } @else {
+    @if( color === "primary" ) {
+    <div class="primary">
+        <div class="button-text">
+            {{buttonText}}
+        </div>
+    </div>
+    }
+    @if(color === "secondary") {
+    <div class="secondary">
+        <div class="button-text">
+            {{buttonText}}
+        </div>
+    </div>
+    }
+    }
+</div>

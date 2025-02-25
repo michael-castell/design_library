@@ -1,0 +1,58 @@
+.button-background {
+    user-select: none;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    filter: drop-shadow(1.5px 1.5px 2px rgb(92, 92, 92));
+
+    .primary {
+        border-radius: 5px;
+        background-color: var(--primary-color);
+
+        &:hover {
+            background-color: var(--primary-hover-color);
+        }
+
+        &:active {
+            background-color: var(--primary-select-color);
+        }
+
+        .button-text {
+            margin: 10px;
+            padding: 10px;
+            color: var(--white-color);
+        }
+    }
+
+    .secondary {
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+
+        &:hover {
+            background-color: var(--secondary-hover-color);
+        }
+
+        &:active {
+            background-color: var(--secondary-select-color);
+        }
+
+        .button-text {
+            margin: 10px;
+            padding: 10px;
+            color: var(--white-color);
+        }
+    }
+
+    .disabled {
+        cursor: auto;
+        border-radius: 5px;
+        background-color: var(--disabled-color);
+
+        .button-text {
+            margin: 10px;
+            padding: 10px;
+            color: var(--white-color);
+        }
+    }
+
+}
