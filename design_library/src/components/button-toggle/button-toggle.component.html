@@ -1,0 +1,26 @@
+<div class="toggle-button-background">
+    @for( button of buttonTextList; track button; let idx = $index) {
+        @if( disabled ) {
+            <div class="disabled" id="{{idx}}">
+                <div class="button-text">
+                    {{button}}
+                </div>
+            </div>
+        } @else {
+            @if( color === "primary" ) {
+                <div class="primary" id="p{{idx}}" (click)="onClickButton($event)">
+                    <div class="button-text">
+                        {{button}}
+                    </div>
+                </div>
+            }
+            @if( color === "secondary" ) {
+                <div class="secondary" id="s{{idx}}" (click)="onClickButton($event)">
+                    <div class="button-text">
+                        {{button}}
+                    </div>
+                </div>
+            }
+        }
+    }   
+</div>
