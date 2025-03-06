@@ -1,0 +1,43 @@
+.input-background {
+    cursor: text;
+    width: 200px;
+    height: 30px;
+    background-color: var(--white-color);
+
+    .input-border-primary {
+        .input-primary {
+            border: 2px solid var(--primary-color);
+
+            &:focus {
+                outline: 1px solid var(--primary-hover-color);
+            }
+        }
+    }
+
+    .input-border-secondary {
+        .input-secondary {
+            border: 2px solid var(--secondary-color);
+
+            &:focus {
+                outline: 1px solid var(--secondary-hover-color);
+            }
+        }
+    }
+
+    .input-border-disabled {
+        .input-disabled {
+            border: 2px solid var(--disabled-color);
+        }
+    }
+
+    .button-text {
+        padding: 10px;
+        color: var(--black-color);
+    }
+}
+
+.input-size {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}

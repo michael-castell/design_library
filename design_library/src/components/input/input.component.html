@@ -1,0 +1,19 @@
+<div class="input-background">
+    @if( !disabled ) {
+        @if( color === "primary" ) {
+            <div class="input-border-primary">
+                <input type="{{type}}" class="input-size input-primary">
+            </div>
+        }
+        @if( color === "secondary" ) {
+            <div class="input-border-secondary">
+                <input type="{{type}}" class="input-size input-secondary">
+            </div>
+        }
+    } @else {
+        <div class="input-border-disabled">
+            <input disabled type="{{type}}" class="input-size input-disabled">
+        </div>
+    }
+</div>
+
