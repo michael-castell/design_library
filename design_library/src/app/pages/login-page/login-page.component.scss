@@ -1,0 +1,21 @@
+.login-wrapper {
+    margin: auto 0;
+    display: block;
+    max-height: 1000px;
+    justify-self: center;
+    padding-top: 20vh;
+    width: 400px;
+
+    .login-title {
+        color: var(--primary-color)
+    }
+
+    .login-width {
+        width: 100%;
+    }
+
+    .or {
+        justify-self: center;
+        color: var(--primary-hover-color);
+    }
+}

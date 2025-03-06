@@ -11,4 +11,6 @@ export class InputComponent {
   @Input() color: "primary" | "secondary" = "primary";
   @Input() disabled: boolean = false;
   @Input() type: "text" | "password" = "text";
+  @Input() lable: string = "";
+  @Input() id: string = "";
 }

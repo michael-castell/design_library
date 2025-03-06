@@ -1,8 +1,9 @@
 .button-background {
     user-select: none;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     cursor: pointer;
+    justify-self: center;
 
     .primary {
         border-radius: 5px;
@@ -44,6 +45,7 @@
         margin: 10px;
         padding: 10px;
         color: var(--white-color);
+        justify-self: center;
     }
 
 }
