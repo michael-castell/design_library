@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mbc-button',
@@ -11,4 +11,9 @@ export class ButtonComponent {
   @Input() color: "primary" | "secondary" = "primary";
   @Input() disabled: boolean = false;
   @Input() buttonText: string = "";
+  @Output() buttonClickEmitter = new EventEmitter<string>();
+
+  buttonClicked($event: any) {
+    this.buttonClickEmitter.emit($event);
+  }
 }

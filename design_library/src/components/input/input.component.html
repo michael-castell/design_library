@@ -3,19 +3,19 @@
         @if( color === "primary" ) {
             <div class="input-border-primary">
                 <label for="{{id}}" class="primary-lable">{{lable}}</label>
-                <input id="{{id}}" name="{{id}}" type="{{type}}" class="input-size input-primary">
+                <input id="{{id}}" name="{{id}}" type="{{type}}" class="input-text input-size input-primary">
             </div>
         }
         @if( color === "secondary" ) {
             <div class="input-border-secondary">
                 <label for="{{id}}" class="secondary-lable">{{lable}}</label>
-                <input id="{{id}}" name="{{id}}" type="{{type}}" class="input-size input-secondary">
+                <input id="{{id}}" name="{{id}}" type="{{type}}" class="input-text input-size input-secondary">
             </div>
         }
     } @else {
         <div class="input-border-disabled">
             <label for="{{id}}" class="disabled-lable">{{lable}}</label>
-            <input id="{{id}}" name="{{id}}" disabled type="{{type}}" class="input-size input-disabled">
+            <input id="{{id}}" name="{{id}}" disabled type="{{type}}" class="input-text input-size input-disabled">
         </div>
     }
 </div>

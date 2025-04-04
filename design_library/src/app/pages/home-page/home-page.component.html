@@ -1,0 +1,30 @@
+<mbc-sidebar-navigation [color]="'secondary'" [linkList]="links" [titles]="titles"></mbc-sidebar-navigation>
+<h1 class="title">Custom Design Library with Example Components</h1>
+<h4 class="subtitle">Made by Michael Castell</h4>
+<div class="full-page">
+    <div class="buttons">
+        <p>Buttons</p>
+        <mbc-button (buttonClickEmitter)="buttonClicked($event)" [buttonText]="'Primary Button'"></mbc-button>
+        <p>{{displayButton}}</p>
+        <mbc-button [color]="'secondary'" [buttonText]="'Secondary Button'"></mbc-button>
+        <mbc-button [disabled]="true" [buttonText]="'Disabled Button'"></mbc-button>
+    </div>
+    <div class="toggle-buttons">
+        <p>Toggle Buttons</p>
+        <mbc-button-toggle (selectedEmitter)="handleSelected($event)" [buttonTextList]="['Primary', 'Toggle', 'Button']"></mbc-button-toggle>
+        <p>{{selected}}</p>
+        <mbc-button-toggle [defaultSelected]="3"
+            [buttonTextList]="['Secondary', 'Toggle', 'Button', 'Default', 'Selected']"
+            [color]="'secondary'"></mbc-button-toggle>
+        <p></p>
+        <mbc-button-toggle [disabled]="true" [buttonTextList]="['Disabled', 'Toggle', 'Button']"></mbc-button-toggle>
+    </div>
+    <div class="inputs">
+        <p>Inputs</p>
+        <mbc-input [lable]="'Primary Input'" [color]="'primary'"></mbc-input>
+        <div class="separator"></div>
+        <mbc-input [lable]="'Secondary Input'" [color]="'secondary'" [type]="'password'"></mbc-input>
+        <div class="separator"></div>
+        <mbc-input [lable]="'Disabled Input'" [disabled]="true"></mbc-input>
+    </div>
+</div>
