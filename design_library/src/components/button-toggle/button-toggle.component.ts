@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'mbc-button-toggle',
@@ -14,6 +14,7 @@ export class ButtonToggleComponent implements OnInit {
   @Input() requireSelection: boolean = false;
   @Input() buttonTextList: string[] = [];
   @Output() selected: number = -1;
+  @Output() selectedEmitter = new EventEmitter<string>();
 
   ngOnInit(): void {
 
@@ -46,6 +47,7 @@ export class ButtonToggleComponent implements OnInit {
       document.getElementById(String(this.selected))?.classList.remove("secondary");
       document.getElementById(String(this.selected))?.classList.add("secondary-active");
     }
+    this.selectedEmitter.emit(String(this.selected));
   }
 
   private defaultSelection() {

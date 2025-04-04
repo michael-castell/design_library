@@ -14,4 +14,27 @@ import { ButtonToggleComponent } from '../../../components/button-toggle/button-
 export class HomePageComponent {
   links: string[] = ["https://www.google.com/", "https://www.bing.com/", "https://www.amazon.com/"];
   titles: string[] = ["Google.com", "Bing.com", "Amazon.com"];
+  public selected: string = "";
+  public displayButton: string = "";
+
+  handleSelected($event: any) {
+    switch ($event) {
+      case "p0":
+        this.selected = "First button selected.";
+        break;
+      case "p1":
+        this.selected = "Second button selected.";
+        break;
+      case "p2":
+        this.selected = "Third button selected.";
+        break;
+      default:  
+        this.selected = "";
+        break;
+    }
+  }
+
+  buttonClicked($event: any) {
+    this.displayButton = $event.target.innerText + " was clicked.";
+  }
 }
